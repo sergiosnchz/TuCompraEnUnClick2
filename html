@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TuCompraEnUnClick</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+
+</head>
+<body>
+
+<div id="app">
+
+  <header>
+    <h1>TuCompraEnUnClick</h1>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="mostrarVentana('inicio')">Inicio</a></li>
+        <li><a href="#" onclick="mostrarVentana('productos')">Productos</a></li>
+        <li><a href="#" onclick="mostrarVentana('realizar-compra')">Realizar Compra</a></li>
+        <li><a href="#" onclick="mostrarVentana('compras-publicadas')">Compras Publicadas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inicio" class="ventana">
+    <h2>Bienvenido a TuCompraEnUnClick</h2>
+    <p>Explora nuestras opciones para realizar tus compras en línea de manera rápida y sencilla.</p>
+  </section>
+
+  <section id="productos" class="ventana">
+    <div class="producto">
+      <img src="https://findlogovector.com/wp-content/uploads/2018/12/mercadona-supermercados-de-confianza-logo-vector.png" alt="Logo de Mercadona">
+      <h3>Mercadona</h3>
+      <p>Tienda de alimentación con una amplia variedad de productos.</p>
+      <a href="https://www.mercadona.es/" target="_blank">Visitar Mercadona</a>
+    </div>
+
+    <div class="producto">
+      <img src="https://www.aldi.es/etc/designs/aldi/web/frontend/aldi/images/app/app-icon.svg.res/1638344259427/app-icon.svg" alt="Logo de Aldi">
+      <h3>Aldi</h3>
+      <p>Tienda de descuentos con productos frescos y de marca propia.</p>
+      <a href="https://www.aldi.es/" target="_blank">Visitar Aldi</a>
+    </div>
+
+    <div class="producto">
+      <img src="https://www.cadizcentrocomercial.com/wp-content/uploads/2018/05/SUPERMERCADOSELJAMON.png" alt="Logo de El Jamón">
+      <h3>El Jamón</h3>
+      <p>Tienda especializada en productos relacionados con el jamón.</p>
+      <a href="https://www.eljamonhuelva.com/" target="_blank">Visitar El Jamón</a>
+    </div>
+  </section>
+
+  <section id="realizar-compra" class="ventana">
+    <h2>Realizar Compra</h2>
+    <form id="formCompra" onsubmit="event.preventDefault(); publicarCompra();">
+      <label for="productos">Productos que deseas comprar:</label>
+      <textarea id="productos" name="productos" rows="4" placeholder="Escribe los productos aquí"></textarea>
+
+      <label for="instrucciones">Instrucciones adicionales:</label>
+      <textarea id="instrucciones" name="instrucciones" rows="4" placeholder="Añade instrucciones especiales"></textarea>
+
+      <button type="submit">Publicar Compra</button>
+    </form>
+  </section>
+
+  <section id="compras-publicadas" class="ventana">
+    <h2>Compras Publicadas</h2>
+    <div id="listaCompras">
+      <!-- Lista de compras publicadas -->
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <p>&copy; 2023 TuCompraEnUnClick</p>
+</footer>
+
+<script src="app.js"></script> <!-- Enlace al archivo JavaScript -->
+</body>
+</html>
